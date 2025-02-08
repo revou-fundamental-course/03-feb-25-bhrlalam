@@ -1,29 +1,30 @@
-document.getElementById('tempForm').addEventListener('submit', function(event) {
+// script.js
+
+document.getElementById("temperatureForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const temperatureInput = document.getElementById('temperature').value;
-    const unit = document.getElementById('unit').value;
-    const resultDiv = document.getElementById('result');
-    const explanationDiv = document.getElementById('explanation');
+    let temperature = parseFloat(document.getElementById("temperature").value);
+    let unit = document.getElementById("unit").value;
 
-    // Validate input
-    if (temperatureInput === '' || isNaN(temperatureInput)) {
-        alert('Please enter a valid number for temperature.');
-        return;
+    let result, explanation, formula;
+
+    if (unit === "C") {
+        // Konversi dari Celsius ke Fahrenheit
+        result = (temperature * 9/5) + 32;
+        explanation = `${temperature}°C adalah ${result.toFixed(2)}°F.`;
+        formula = "Rumus: (Celsius × 9/5) + 32 = Fahrenheit";
+    } else if (unit === "F") {
+        // Konversi dari Fahrenheit ke Celsius
+        result = (temperature - 32) * 5/9;
+        explanation = `${temperature}°F adalah ${result.toFixed(2)}°C.`;
+        formula = "Rumus: (Fahrenheit - 32) × 5/9 = Celsius";
     }
 
-    let result, explanation;
+    // Tampilkan hasil konversi
+    document.getElementById("convertedTemperature").textContent = result.toFixed(2) + '°';
+    document.getElementById("explanation").textContent = explanation;
+    document.getElementById("formula").textContent = formula;
 
-    if (unit === 'celsius') {
-        // Convert from Celsius to Fahrenheit
-        result = (temperatureInput * 9/5) + 32;
-        explanation = `${temperatureInput}°C is equal to ${result}°F.`;
-    } else if (unit === 'fahrenheit') {
-        // Convert from Fahrenheit to Celsius
-        result = (temperatureInput - 32) * 5/9;
-        explanation = `${temperatureInput}°F is equal to ${result}°C.`;
-    }
-
-    resultDiv.innerHTML = `Conversion Result: ${result.toFixed(2)}`;
-    explanationDiv.innerHTML = explanation;
+    // Tampilkan elemen hasil konversi
+    document.getElementById("result").style.display = "block";
 });

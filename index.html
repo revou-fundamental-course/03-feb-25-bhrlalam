@@ -1,26 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Suhu</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Documents/repsitory git bahrul/03-feb-25-bhrlalam/styles.css">
 </head>
+
 <body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Kalkulator Suhu</div>
+
+    </nav>
+
     <div class="container">
-        <h1>Kalkulator Suhu</h1>
-        <form id="tempForm">
-            <label for="temperature">Enter Temperature:</label>
-            <input type="number" id="temperature" name="temperature" required>
-            <select id="unit" name="unit">
-                <option value="celsius">Celsius</option>
-                <option value="fahrenheit">Fahrenheit</option>
-            </select>
-            <button type="submit">Konversi</button>
-        </form>
-        <div id="result"></div>
-        <div id="explanation"></div>
+        <div class="card">
+            <h1>Kalkulator Suhu</h1>
+            <p class="description">Konversikan suhu antara Celsius dan Fahrenheit dengan mudah!</p>
+
+            <form id="temperatureForm">
+                <div class="input-group">
+                    <label for="temperature">Masukkan Suhu:</label>
+                    <input type="number" id="temperature" name="temperature" placeholder="Masukkan suhu" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="unit">Pilih Unit:</label>
+                    <select id="unit" name="unit">
+                        <option value="C">Celsius</option>
+                        <option value="F">Fahrenheit</option>
+                    </select>
+                </div>
+
+                <button type="submit">Konversi</button>
+            </form>
+        </div>
+
+        <div id="result" class="card">
+            <h2>Hasil Konversi:</h2>
+            <p id="convertedTemperature"></p>
+            <p id="explanation"></p>
+            <p id="formula"></p> <!-- Menampilkan rumus konversi -->
+        </div>
     </div>
+
+    <!-- Footer dengan Copyright -->
+    <footer>
+        <p>Muhammad Bahrul Alam&copy; 2025 Kalkulator Suhu.</p>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>

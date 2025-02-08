@@ -1,48 +1,135 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* Atur body dan html agar tinggi penuh */
+html, body {
+    height: 100%;
     margin: 0;
-    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+    background-color: #e6e6e6; /* Warna latar belakang lembut */
 }
 
-.container {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-}
-
-input, select, button {
-    padding: 8px;
-    margin: 10px;
-    font-size: 16px;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button {
-    background-color: #4CAF50;
+/* Navbar styling */
+nav {
+    background-color: #333;
+    padding: 10px 20px;
     color: white;
-    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
 }
 
-button:hover {
-    background-color: #45a049;
-}
-
-#result {
-    margin-top: 20px;
-    font-size: 18px;
+nav .logo {
+    font-size: 24px;
     font-weight: bold;
 }
 
-#explanation {
-    margin-top: 10px;
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
     font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Atur container untuk layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh; /* Pastikan container mengambil minimal tinggi layar penuh */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Styling untuk card */
+.card {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Efek bayangan pada card */
+    max-width: 400px; /* Maksimal lebar card */
+    width: 100%;
+    text-align: center; /* Menyelaraskan teks di tengah */
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Styling untuk input dan tombol */
+input, select {
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Styling untuk hasil konversi */
+#result {
+    display: none; /* Awalnya tidak tampil */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+#result h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#result p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Footer berada di bawah */
+footer {
+    margin-top: auto;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
 }
