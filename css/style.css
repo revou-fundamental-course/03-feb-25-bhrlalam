@@ -47,7 +47,7 @@ nav ul li a:hover {
 .container {
     display: flex;
     flex-direction: column;
-    min-height: 90vh; /* Pastikan container mengambil minimal tinggi layar penuh */
+    min-height: 80vh; /* Pastikan container mengambil minimal tinggi layar penuh */
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -80,7 +80,7 @@ h1 {
 /* Styling untuk input dan tombol */
 input, select {
     padding: 10px;
-    width: 100%;
+    width: 90%;
     margin: 10px 0;
     border-radius: 8px;
     border: 1px solid #ddd;
@@ -90,7 +90,7 @@ input, select {
 button {
     background-color: #333;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
