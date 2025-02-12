@@ -1,5 +1,3 @@
-// script.js
-
 document.getElementById("temperatureForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
