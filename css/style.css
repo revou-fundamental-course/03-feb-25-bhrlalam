@@ -59,21 +59,23 @@ nav ul li a:hover {
     border-radius: 12px;
     background-color: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
-    max-width: 400px; 
+    max-width: 350px; 
     width: 100%;
     text-align: center; 
 }
 
 h1 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 25px;
+    color: #ffde3d;
+    margin-bottom: 6%;
+    margin-top: 3%;
+    
 }
 
 .description {
-    font-size: 16px;
+    font-size: 15px;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 7%;
 }
 
 
@@ -87,19 +89,20 @@ input, select {
 }
 
 button {
-    background-color: #333;
-    color: white;
+    background-color: #ffde3d;
+    color: rgb(0, 0, 0);
     padding: 15px 20px;
     border: none;
-    border-radius: 8px;
+    border-radius: 24px;
     cursor: pointer;
     font-size: 16px;
     width: 100%;
     transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #eed038;
 }
 
 
@@ -113,12 +116,12 @@ button:hover {
 }
 
 #result h2 {
-    color: #333;
+    color: #ffde3d;
     margin-bottom: 15px;
 }
 
 #result p {
-    color: #555;
+    color: #000000;
     font-size: 16px;
     line-height: 1.6;
 }
